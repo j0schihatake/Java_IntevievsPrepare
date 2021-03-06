@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a840d59-0c23-43a9-8be3-f75ef6869cf7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/jvm/JVM_class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PLAN" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jvm/JVM_memory" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algoritms/SortedAlgoritms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algoritms/sorting/SortedAlgoritms.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algoritms/alg.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/algoritms/sorting/alg.gif" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,14 +49,18 @@
     <session id="-1236685710">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="JVM" value="1" />
+          <entry key="JVM_memory" value="1" />
           <entry key="OOP" value="1" />
+          <entry key="PLAN" value="1" />
           <entry key="SOLID" value="1" />
           <entry key="java" value="1" />
         </counts>
@@ -65,13 +68,14 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JAVA" value="1" />
-          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="JVM" value="4" />
           <entry key="JVM_class" value="66" />
+          <entry key="JVM_memory" value="41" />
           <entry key="OOP" value="89" />
           <entry key="SOLID" value="319" />
           <entry key="java" value="43" />
@@ -80,7 +84,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="43" />
-          <entry key="PLAIN_TEXT" value="478" />
+          <entry key="PLAIN_TEXT" value="519" />
         </counts>
       </usages-collector>
     </session>
@@ -96,11 +100,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jvm/JVM_class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2480">
-              <caret line="15" column="113" lean-forward="true" selection-start-line="15" selection-start-column="113" selection-end-line="15" selection-end-column="113" />
+            <state relative-caret-position="374">
+              <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/jvm/JVM_memory">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="634">
+              <caret line="58" column="114" lean-forward="true" selection-start-line="58" selection-start-column="114" selection-end-line="58" selection-end-column="114" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PLAN">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -108,7 +130,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SOLID">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="835">
+            <state relative-caret-position="1037">
               <caret line="61" selection-start-line="61" selection-end-line="61" />
             </state>
           </provider>
@@ -162,6 +184,8 @@
         <option value="$PROJECT_DIR$/src/algoritms/sorting/SortedAlgoritms.java" />
         <option value="$PROJECT_DIR$/src/JVM" />
         <option value="$PROJECT_DIR$/src/JVM_class" />
+        <option value="$PROJECT_DIR$/src/PLAN" />
+        <option value="$PROJECT_DIR$/src/jvm/JVM_memory" />
       </list>
     </option>
   </component>
@@ -182,7 +206,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -213,18 +236,25 @@
               <item name="Java_IntevievsPrepare" type="b2602c69:ProjectViewProjectNode" />
               <item name="Java_IntevievsPrepare" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="books" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Java_IntevievsPrepare" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java_IntevievsPrepare" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="jvm" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1615018739275" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1615034137151" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -268,18 +298,19 @@
       <updated>1614878768356</updated>
       <workItem from="1614878772098" duration="3269000" />
       <workItem from="1615012737341" duration="949000" />
-      <workItem from="1615016761616" duration="1976000" />
+      <workItem from="1615016761616" duration="2113000" />
+      <workItem from="1615029458531" duration="3883000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6194000" />
+    <option name="totallyTimeSpent" value="10214000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="83" y="-8" width="1845" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25714287" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.259944" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -317,23 +348,17 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/IntervievQuestions.java">
+    <entry file="file://$PROJECT_DIR$/src/SOLID.java" />
+    <entry file="file://$PROJECT_DIR$/src/algoritms/sorting/SortedAlgoritms.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SOLID.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="1" lean-forward="true" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+        <state relative-caret-position="1717">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SOLID">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="835">
+        <state relative-caret-position="1037">
           <caret line="61" selection-start-line="61" selection-end-line="61" />
         </state>
       </provider>
@@ -345,20 +370,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/algoritms/sorting/alg.gif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/algoritms/sorting/SortedAlgoritms.java">
+    <entry file="file://$PROJECT_DIR$/src/IntervievQuestions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1717">
-          <caret line="101" selection-start-line="101" selection-end-line="101" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/PLAN">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algoritms/sorting/alg.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/jvm/JVM_class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2480">
-          <caret line="15" column="113" lean-forward="true" selection-start-line="15" selection-start-column="113" selection-end-line="15" selection-end-column="113" />
+        <state relative-caret-position="374">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvm/JVM_memory">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="634">
+          <caret line="58" column="114" lean-forward="true" selection-start-line="58" selection-start-column="114" selection-end-line="58" selection-end-column="114" />
         </state>
       </provider>
     </entry>
