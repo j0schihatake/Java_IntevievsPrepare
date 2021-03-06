@@ -1,0 +1,659 @@
+Исключение – это проблема(ошибка) возникающая во время выполнения программы. Исключения могут возникать во многих
+случаях, например:
+
+Пользователь ввел некорректные данные.
+Файл, к которому обращается программа, не найден.
+Сетевое соединение с сервером было утеряно во время передачи данных. И т.д.
+Все исключения в Java являются объектами. Поэтому они могут порождаться не только автоматически при возникновении
+исключительной ситуации, но и создаваться самим разработчиком.
+
+2. Какова иерархия исключений.
+Иерархия Исключений Java
+
+Исключения делятся на несколько классов, но все они имеют общего предка — класс Throwable. Его потомками являются
+подклассы Exception и Error.
+
+Исключения (Exceptions) являются результатом проблем в программе, которые в принципе решаемые и предсказуемые.
+Например, произошло деление на ноль в целых числах.
+
+Ошибки (Errors) представляют собой более серьёзные проблемы, которые, согласно спецификации Java, не следует пытаться
+обрабатывать в собственной программе, поскольку они связаны с проблемами уровня JVM. Например, исключения такого рода
+возникают, если закончилась память, доступная виртуальной машине. Программа дополнительную память всё равно не сможет
+обеспечить для JVM.
+
+В Java все исключения делятся на два типа: контролируемые исключения (checked) и неконтролируемые исключения
+(unchecked), к которым относятся ошибки (Errors) и исключения времени выполнения (RuntimeExceptions, потомок класса
+Exception).
+
+Контролируемые исключения представляют собой ошибки, которые можно и нужно обрабатывать в программе, к этому типу
+относятся все потомки класса Exception (но не RuntimeException).
+
+3. Можно/нужно ли обрабатывать ошибки jvm?
+Обрабатывать можно, но делать этого не стоит. Разработчику не предоставлены инструменты для обработки ошибок системы
+и виртуальной машины.
+
+4. Какие существуют способы обработки исключений?
+В Java есть пять ключевых слов для работы с исключениями:
+try – данное ключевое слово используется для отметки начала блока кода, который потенциально может привести к ошибке.
+catch – ключевое слово для отметки начала блока кода, предназначенного для перехвата и обработки исключений.
+finally – ключевое слово для отметки начала блока кода, которой является дополнительным. Этот блок помещается после
+последнего блока ‘catch’. Управление обычно передаётся в блок ‘finally’ в любом случае.
+throw – служит для генерации исключений.
+throws – ключевое слово, которое прописывается в сигнатуре метода, и обозначающее что метод потенциально может
+выбросить исключение с указанным типом.
+Общий вид конструкции для “поимки” исключительной ситуации выглядит следующим образом:
+
+try{
+//здесь код, который потенциально может привести к ошибке
+}
+catch(SomeException e ){ //в скобках указывается класс конкретной ожидаемой ошибки
+//здесь описываются действия, направленные на обработку исключений
+}
+finally{
+//выполняется в любом случае ( блок finally  не обязателен)
+}
+1
+2
+3
+4
+5
+6
+7
+8
+9
+try{
+//здесь код, который потенциально может привести к ошибке
+}
+catch(SomeException e ){ //в скобках указывается класс конкретной ожидаемой ошибки
+//здесь описываются действия, направленные на обработку исключений
+}
+finally{
+//выполняется в любом случае ( блок finally  не обязателен)
+}
+Подробнее http://www.quizful.net/post/java-exceptions
+5. О чем говорит ключевое слово throws?
+throws – ключевое слово, которое прописывается в сигнатуре метода, и обозначающее что метод потенциально может
+выбросить исключение с указанным типом.
+
+6. В чем особенность блока finally? Всегда ли он исполняется?
+Когда исключение передано, выполнение метода направляется по нелинейному пути. Это может стать источником проблем.
+Например, при входе метод открывает файл и закрывает при выходе. Чтобы закрытие файла не было пропущено из-за обработки
+ исключения, был предложен механизм finally.
+
+Ключевое слово finally создаёт блок кода, который будет выполнен после завершения блока try/catch, но перед кодом,
+следующим за ним. Блок будет выполнен, независимо от того, передано исключение или нет. Оператор finally не обязателен,
+однако каждый оператор try требует наличия либо catch, либо finally. Код в блоке finally будет выполнен всегда.
+
+7. Может ли не быть ни одного блока catch при отлавливании исключений?
+Такая запись допустима, если имеется связка try{} finally {}. Но смысла в такой записи не так много, всё же лучше иметь
+блок catch в котором будет обрабатываться необходимое исключение.
+
+String x = "z";
+try {
+   x="234";
+} finally {
+    x = "Finally";
+}
+1
+2
+3
+4
+5
+6
+String x = "z";
+try {
+   x="234";
+} finally {
+    x = "Finally";
+}
+8. Могли бы вы придумать ситуацию, когда блок finally не будет выполнен?
+Блок finally выполняется не всегда, например в такой ситуации:
+
+try {
+    System.exit(0);
+} catch(Exception e) {
+    e.printStackTrace();
+} finally { }
+1
+2
+3
+4
+5
+try {
+    System.exit(0);
+} catch(Exception e) {
+    e.printStackTrace();
+} finally { }
+Здесь finally недостижим, так как происходит системный выход из программы. Общими словами: когда jvm умирает, ей не
+до finally (отсюда можете придумать другие примеры как убить jvm и ответить на вопрос в заголовке).
+
+9. Может ли один блок catch отлавливать несколько исключений (с одной и разных веток наследований)?
+В Java 7 стала доступна новая конструкция, с помощью которой можно перехватывать несколько исключений одним блоком catch:
+try {
+ ...
+} catch( IOException | SQLException ex ) {
+  logger.log(ex);
+  throw ex;
+}
+1
+2
+3
+4
+5
+6
+try {
+ ...
+} catch( IOException | SQLException ex ) {
+  logger.log(ex);
+  throw ex;
+}
+10. Что вы знаете об обрабатываемых и не обрабатываемых (checked/unchecked) исключениях?
+Все исключительные ситуации делятся на «проверяемые» (checked) и «непроверяемые» (unchecked) (смотрите картинку в
+начале статьи). Это свойство присуще «корневищу» (Throwable, Error, Exception, RuntimeException) и передается по
+наследству. Никак не видимо в исходном коде класса исключения.
+В дальнейших примерах просто учтите, что— Throwable и Exception и все их наследники (за исключением наследников
+Error-а и RuntimeException-а) — checked
+— Error и RuntimeException и все их наследники — unchecked
+checked exception = проверяемое исключение, проверяемое компилятором.
+
+Тема достаточно обширная для того, чтобы уместить ее в одном ответе. К примеру, можно разобрать примеры Головача:
+http://habrahabr.ru/company/golovachcourses/blog/225585/
+
+И еще с quizful.net
+
+1. Checked исключения, это те, которые должны обрабатываться блоком catch или описываться в сигнатуре метода.
+Unchecked могут не обрабатываться и не быть описанными.
+2. Unchecked исключения в Java – наследованные от RuntimeException, checked – от Exception (не включая unchecked).
+
+Checked исключения отличаются от Unchecked исключения в Java, тем что:
+1)Наличие\обработка Checked исключения проверяются на этапе компиляции. Наличие\обработка Unchecked исключения
+происходит на этапе выполнения.
+
+11. В чем особенность RuntimeException?
+public class RuntimeException extends Exception – базовый класс для ошибок во время выполнения. Относится к
+необрабатываемым исключениям (uncatched\unchecked). Как сказано в описании класса – это суперкласс, исключения которого
+ могут быть выброшены во время нормальной работы JVM.
+
+12. Как написать собственное (“пользовательское”) исключение? Какими мотивами вы будете руководствоваться при выборе
+типа исключения: checked/unchecked?
+Необходимо унаследоваться от базового класса требуемого типа исключений (например от Exception или RuntimeException).
+
+public class ExcClass extends Exception {
+
+    private String someString;
+
+    public ExcClass (String string) {
+        this.someString = string;
+        System.out.println("Exception ExcClass");
+    }
+
+    public void myOwnExceptionMsg() {
+        System.err.println("This is exception message for string: " + someString);
+    }
+}
+
+public class TestExc {
+
+    public static void main(String[] args) {
+        try {
+            String s = "SomeString";
+            throw new ExcClass(s);
+        } catch (ExcClass ex) {
+            ex.myOwnExceptionMsg();
+        }
+    }
+}
+//Вывод
+Exception ExcClass
+This is exception message for string: SomeString
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+public class ExcClass extends Exception {
+
+    private String someString;
+
+    public ExcClass (String string) {
+        this.someString = string;
+        System.out.println("Exception ExcClass");
+    }
+
+    public void myOwnExceptionMsg() {
+        System.err.println("This is exception message for string: " + someString);
+    }
+}
+
+public class TestExc {
+
+    public static void main(String[] args) {
+        try {
+            String s = "SomeString";
+            throw new ExcClass(s);
+        } catch (ExcClass ex) {
+            ex.myOwnExceptionMsg();
+        }
+    }
+}
+//Вывод
+Exception ExcClass
+This is exception message for string: SomeString
+Руководствоваться нужно определением типа исключения. В зависимости от того, что вы хотите обрабатывать или видеть нужно
+и наследоваться от нужного класса.
+
+13. Какой оператор позволяет принудительно выбросить исключение?
+throw new Exception();
+
+14. Есть ли дополнительные условия к методу, который потенциально может выбросить исключение?
+Если это проверяемое исключение, то оно должно быть задекларировано в сигнатуре метода.
+
+ public void someMethod() throws Exception {
+    }
+1
+2
+ public void someMethod() throws Exception {
+    }
+15. Может ли метод main выбросить исключение во вне и если да, то где будет происходить обработка данного исключения?
+Может и оно будет передано в виртуальную машину Java (JVM).
+
+16. Если оператор return содержится и в блоке catch и в finally, какой из них “главнее”?
+Вернется из блока finally.
+
+    public static void main(String[] args) {
+       String what =  method();
+        System.out.println(what);
+    }
+
+    public static String method() {
+        try {
+            return "SomeString";
+        } catch(Exception ex) {
+            return "Catch message";
+        } finally {
+            return "Finally message";
+        }
+    }
+//Вывод
+Finally message
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+    public static void main(String[] args) {
+       String what =  method();
+        System.out.println(what);
+    }
+
+    public static String method() {
+        try {
+            return "SomeString";
+        } catch(Exception ex) {
+            return "Catch message";
+        } finally {
+            return "Finally message";
+        }
+    }
+//Вывод
+Finally message
+17. Что вы знаете о OutOfMemoryError?
+OutOfMemoryError выбрасывается, когда виртуальная машина Java не может выделить (разместить) объект из-за нехватки
+памяти, а сборщик мусора не может высвободить ещё.
+
+Область памяти, занимаемая java процессом, состоит из нескольких частей. Тип OutOfMemoryError зависит от того, в какой
+из них не хватило места.
+Области памяти
+
+1. java.lang.OutOfMemoryError: Java heap space
+Не хватает места в куче, а именно, в области памяти в которую помещаются объекты, создаваемые программно в вашем
+приложении. Размер задается параметрами -Xms и -Xmx. Если вы пытаетесь создать объект, а места в куче не осталось, то
+получаете эту ошибку. Обычно проблема кроется в утечке памяти, коих бывает великое множество, и интернет просто пестрит
+статьями на эту тему.
+
+2. java.lang.OutOfMemoryError: PermGen space
+Данная ошибка возникает при нехватке места в Permanent области, размер которой задается параметрами
+-XX:PermSize и -XX:MaxPermSize.
+
+3. java.lang.OutOfMemoryError: GC overhead limit exceeded
+Данная ошибка может возникнуть как при переполнении первой, так и второй областей. Связана она с тем, что памяти
+осталось мало и GC постоянно работает, пытаясь высвободить немного места. Данную ошибку можно отключить с помощью
+параметра -XX:-UseGCOverheadLimit, но, конечно же, её надо не отключать, а либо решать проблему утечки памяти, либо
+выделять больше объема, либо менять настройки GC.
+
+4. java.lang.OutOfMemoryError: unable to create new native thread
+
+Выбрасывается, когда нет возможности создать еще потоки.
+
+Подробнее в статье http://habrahabr.ru/post/117274/
+18. Что вы знаете о SQLException? К какому типу checked или unchecked оно относится, почему?
+SQLException предоставляет информацию об ошибках доступа к базе данных или других ошибках связанных с работой с
+базами данных.
+
+SQLException относится к checked исключениям, а значит проверяется на этапе компиляции.
+
+Споры об этом типе исключения идут о том, что разработчику приходится постоянно обрабатывать это исключение в коде,
+хотя большая часть ошибок возникает во время выполнения программы, т.е., по мнению многих, лучше бы отнести его к
+unchecked runtime исключениям.
+
+try {
+    // make some SQL call(s)
+} catch {SQLException e) {
+    // log the exception
+    return; // and give up
+}
+1
+2
+3
+4
+5
+6
+try {
+    // make some SQL call(s)
+} catch {SQLException e) {
+    // log the exception
+    return; // and give up
+}
+Аргумент Joshua Bloch из Effective Java Second Edition такой: сделав SQLException проверяемым – это попытка заставить
+разработчиков обработать исключение и обернуть его в новом уровне абстракции.
+
+19. Что такое Error? В каком случае используется Error. Приведите пример Error’а.
+Ошибки (Errors) представляют собой более серьёзные проблемы, которые, согласно спецификации Java, не следует пытаться
+обрабатывать в собственной программе, поскольку они связаны с проблемами уровня JVM. Например, исключения такого рода
+возникают, если закончилась память, доступная виртуальной машине.
+
+За примером посмотрите картинку иерархии исключений в начале статьи. Как пример – OutOfMemoryError.
+
+20. Какая конструкция используется в Java для обработки исключений?
+Можно использовать try-catch-finally и c 7й Java try-with-resources. Первый способ:
+
+try{
+//здесь код, который потенциально может привести к ошибке
+}
+catch(SomeException e ){ //в скобках указывается класс конкретной ожидаемой ошибки
+//здесь описываются действия, направленные на обработку исключений
+}
+finally{
+//выполняется в любом случае ( блок finally  не обязателен)
+}
+1
+2
+3
+4
+5
+6
+7
+8
+9
+try{
+//здесь код, который потенциально может привести к ошибке
+}
+catch(SomeException e ){ //в скобках указывается класс конкретной ожидаемой ошибки
+//здесь описываются действия, направленные на обработку исключений
+}
+finally{
+//выполняется в любом случае ( блок finally  не обязателен)
+}
+Try с ресурсами:
+
+try(открываем файл и т.п. здесь){
+ //...
+}
+//после блока файл закроется автоматически.
+1
+2
+3
+4
+try(открываем файл и т.п. здесь){
+ //...
+}
+//после блока файл закроется автоматически.
+Пример:
+
+Старый способ
+ BufferedReader br = new BufferedReader(new FileReader(path));
+   try {
+            return br.readLine();
+        } finally {
+            if (br != null) {
+                br.close();
+            }
+        }
+
+JDK 7
+
+ try (BufferedReader br =
+                   new BufferedReader(new FileReader(path)) ) {
+        return br.readLine();
+    }
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+Старый способ
+ BufferedReader br = new BufferedReader(new FileReader(path));
+   try {
+            return br.readLine();
+        } finally {
+            if (br != null) {
+                br.close();
+            }
+        }
+
+JDK 7
+
+ try (BufferedReader br =
+                   new BufferedReader(new FileReader(path)) ) {
+        return br.readLine();
+    }
+Так же смотрите ответ к “Какие существуют способы обработки исключений?”
+
+21. Предположим, есть блок try-finally. В блоке try возникло исключение и выполнение переместилось в блок finally.
+В блоке finally тоже возникло исключение. Какое из двух исключений “выпадет” из блока try-finally? Что случится со
+вторым исключением?
+Ответ аналогичный случаю с двумя return – будет обработано в finally блоке. Если было выброшено два исключения –
+одно в try, второе в finally, то исключение в finally “проглотит” исключение выше (см. пример). Если до блока finally
+исключение было обработано, то мы можем получить информацию об исключении в блоке try и тем самым не потерять
+исключение, которое впоследствии может быть перезаписано в finally другим исключением.
+
+public class TestExc {
+
+    public static void main(String[] args) {
+        Exception ex = twoExceptionsMethod();
+        System.out.println(ex.getClass());
+
+        String s = twoExceptionsMethod2();
+        System.out.println(s);
+    }
+
+    public static Exception twoExceptionsMethod() {
+        try {
+            return new IndexOutOfBoundsException();
+        } finally {
+            return new NullPointerException();
+        }
+    }
+
+    public static String twoExceptionsMethod2() {
+        try {
+            throw new NullPointerException();
+        }catch (NullPointerException ex) {
+            System.out.println(ex.getMessage()+ " catchBlock");;
+        }
+        finally {
+            Exception ex2 = new Exception();
+            return ex2.getMessage() + "finallyBlock";
+        }
+    }
+}
+//Вывод
+class java.lang.NullPointerException
+null catchBlock
+null finallyBlock
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+public class TestExc {
+
+    public static void main(String[] args) {
+        Exception ex = twoExceptionsMethod();
+        System.out.println(ex.getClass());
+
+        String s = twoExceptionsMethod2();
+        System.out.println(s);
+    }
+
+    public static Exception twoExceptionsMethod() {
+        try {
+            return new IndexOutOfBoundsException();
+        } finally {
+            return new NullPointerException();
+        }
+    }
+
+    public static String twoExceptionsMethod2() {
+        try {
+            throw new NullPointerException();
+        }catch (NullPointerException ex) {
+            System.out.println(ex.getMessage()+ " catchBlock");;
+        }
+        finally {
+            Exception ex2 = new Exception();
+            return ex2.getMessage() + "finallyBlock";
+        }
+    }
+}
+//Вывод
+class java.lang.NullPointerException
+null catchBlock
+null finallyBlock
+22. Предположим, есть метод, который может выбросить IOException и FileNotFoundException в какой последовательности
+должны идти блоки catch? Сколько блоков catch будет выполнено?
+Общее правило – обрабатывать исключения нужно от “младшего” к старшему. Т.е. нельзя поставить в первый блок
+catch(Exception e) {}, иначе все дальнейшие блоки catch() уже ничего не смогут обработать, т.к. любое исключение
+будет попадать под ExceptionName extends Exception.
+
+Таким образом сначала нужно обработать public class FileNotFoundException extends IOException, а затем уже IOException.
+
+    public static void ioExcAndFileNotFoundEx() {
+        try {
+            //TODO: some code
+            String x = "abc";
+            if (x.equals("abc")) {
+                throw new IOException();
+            } else {
+                throw new FileNotFoundException();
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.getMessage();
+        }
+    }
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+    public static void ioExcAndFileNotFoundEx() {
+        try {
+            //TODO: some code
+            String x = "abc";
+            if (x.equals("abc")) {
+                throw new IOException();
+            } else {
+                throw new FileNotFoundException();
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.getMessage();
+        }
+    }
