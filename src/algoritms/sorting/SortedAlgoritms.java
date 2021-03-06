@@ -1,8 +1,10 @@
-package algoritms;
+package algoritms.sorting;
 
 import java.util.Arrays;
 
 public class SortedAlgoritms {
+
+    // https://javarush.ru/groups/posts/1997-algoritmih-sortirovki-v-teorii-i-na-praktike
 
     public static void main(String[] args){
         SortedAlgoritms algoritms = new SortedAlgoritms();
@@ -122,7 +124,11 @@ public class SortedAlgoritms {
         System.out.println(Arrays.toString(array));
     }
 
-    // Cортировка слиянием (merge sort): mergeSort(array, 0, array.length-1)
+    /**
+     * Cортировка слиянием (merge sort): mergeSort(array, 0, array.length-1)
+     * Во-вторых, сложность у нас будет уже не квадратичная, как мы с вами привыкли. Сложность данного алгоритма
+     * — логарифмическая. Записывается как O(n log n).
+     */
     public static void mergeSort(int[] source, int left, int right) {
         // Выберем разделитель, т.е. разделим пополам входной массив
         int delimiter = left + ((right - left) / 2) + 1;
@@ -149,4 +155,76 @@ public class SortedAlgoritms {
         System.arraycopy(buffer, 0, source, left, buffer.length);
     }
 
+    /**
+     * Сортировка подсчётом (Counting Sort) и Поразрядная сортировка (Radix Sort)
+     * Другим интересным алгоритмом сортировки является сортировка подсчётом (Counting Sort). Алгоритмическая сложность
+     * в этом случае будет O(n+k), где n — количество элементов, а k — максимальное значение элемента. Есть с
+     * алгоритмом одна незадача: нам нужно знать минимальное и максимальное значение в массиве.
+     */
+    public static int[] countingSort(int[] theArray, int maxValue) {
+        // Массив со "счётчиками" размером от 0 до максимального значения
+        int numCounts[] = new int[maxValue + 1];
+        // В соответствующей ячейке (индекс = значение) увеличиваем счётчик
+        for (int num : theArray) {
+            numCounts[num]++;
+        }
+        // Подготавливаем массив для отсортированного результата
+        int[] sortedArray = new int[theArray.length];
+        int currentSortedIndex = 0;
+        // идём по массиву со "счётчиками"
+        for (int n = 0; n < numCounts.length; n++) {
+            int count = numCounts[n];
+            // идём по количеству значений
+            for (int k = 0; k < count; k++) {
+                sortedArray[currentSortedIndex] = n;
+                currentSortedIndex++;
+            }
+        }
+        return sortedArray;
+    }
+
+    /**
+     * Быстрая сортировка (Quick Sort)
+     * Ну и на сладкое — один из самых известных алгоритмов: быстрая сортировка. Она имеет алгоритмическую сложность,
+     * то есть мы имеем O(n log n). Данную сортировку ещё называют сортировкой Хоара. Интересно, что алгоритм был
+     * придуман Хоаром во время его пребывания в Советском Союзе, где он обучался в Московском университете
+     * компьютерному переводу и занимался разработкой русско-английского разговорника. А ещё данный алгоритм в более
+     * сложной реализации используется в Arrays.sort в Java. А что с Collections.sort? Предлагаю посмотреть
+     * самостоятельно, как сортируются они "под капотом".
+     */
+    public static void quickSort(int[] source, int leftBorder, int rightBorder) {
+        int leftMarker = leftBorder;
+        int rightMarker = rightBorder;
+        int pivot = source[(leftMarker + rightMarker) / 2];
+        do {
+            // Двигаем левый маркер слева направо пока элемент меньше, чем pivot
+            while (source[leftMarker] < pivot) {
+                leftMarker++;
+            }
+            // Двигаем правый маркер, пока элемент больше, чем pivot
+            while (source[rightMarker] > pivot) {
+                rightMarker--;
+            }
+            // Проверим, не нужно обменять местами элементы, на которые указывают маркеры
+            if (leftMarker <= rightMarker) {
+                // Левый маркер будет меньше правого только если мы должны выполнить swap
+                if (leftMarker < rightMarker) {
+                    int tmp = source[leftMarker];
+                    source[leftMarker] = source[rightMarker];
+                    source[rightMarker] = tmp;
+                }
+                // Сдвигаем маркеры, чтобы получить новые границы
+                leftMarker++;
+                rightMarker--;
+            }
+        } while (leftMarker <= rightMarker);
+
+        // Выполняем рекурсивно для частей
+        if (leftMarker < rightBorder) {
+            quickSort(source, leftMarker, rightBorder);
+        }
+        if (leftBorder < rightMarker) {
+            quickSort(source, leftBorder, rightMarker);
+        }
+    }
 }
