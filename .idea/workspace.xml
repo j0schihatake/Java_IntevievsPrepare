@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a840d59-0c23-43a9-8be3-f75ef6869cf7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/collection/CollectionsHierarchy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/collection/collections" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/collection/references" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exception/exceptions" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exception/exceptionsInJavaHierarchy-300x130.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/HashAndEquals" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SQL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/collection/collectionQuestions" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/multithreads/multithreads" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/restMicroservices/restMicroservices" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvm/JVM_memory" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvm/JVM_memory" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algoritms/sorting/SortedAlgoritms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algoritms/sorting/SortedAlgoritms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/collection/collections" beforeDir="false" afterPath="$PROJECT_DIR$/src/collection/collections" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exception/exceptions" beforeDir="false" afterPath="$PROJECT_DIR$/src/exception/exceptions" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,29 +55,38 @@
     <session id="-1236685710">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.closed" value="8" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.7" value="6" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="HashAndEquals" value="1" />
           <entry key="JVM" value="1" />
-          <entry key="JVM_memory" value="1" />
-          <entry key="OOP" value="1" />
+          <entry key="JVM_memory" value="2" />
+          <entry key="OOP" value="2" />
           <entry key="PLAN" value="1" />
-          <entry key="SOLID" value="1" />
-          <entry key="collections" value="1" />
-          <entry key="exceptions" value="1" />
-          <entry key="java" value="1" />
-          <entry key="references" value="1" />
+          <entry key="SOLID" value="2" />
+          <entry key="SQL" value="1" />
+          <entry key="collectionQuestions" value="1" />
+          <entry key="collections" value="3" />
+          <entry key="exceptions" value="2" />
+          <entry key="java" value="3" />
+          <entry key="multithreads" value="2" />
+          <entry key="png" value="4" />
+          <entry key="references" value="2" />
+          <entry key="restMicroservices" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="1" />
-          <entry key="PLAIN_TEXT" value="8" />
+          <entry key="Image" value="4" />
+          <entry key="JAVA" value="3" />
+          <entry key="PLAIN_TEXT" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -85,81 +96,45 @@
           <entry key="JVM_memory" value="190" />
           <entry key="OOP" value="89" />
           <entry key="SOLID" value="319" />
-          <entry key="collections" value="2" />
-          <entry key="exceptions" value="55" />
-          <entry key="java" value="43" />
+          <entry key="SQL" value="22" />
+          <entry key="collectionQuestions" value="97" />
+          <entry key="collections" value="64" />
+          <entry key="exceptions" value="220" />
+          <entry key="java" value="91" />
+          <entry key="multithreads" value="128" />
           <entry key="references" value="22" />
+          <entry key="restMicroservices" value="69" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="43" />
-          <entry key="PLAIN_TEXT" value="747" />
+          <entry key="JAVA" value="91" />
+          <entry key="PLAIN_TEXT" value="1290" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jvm/JVM_class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jvm/JVM_memory">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="101" selection-start-line="11" selection-start-column="101" selection-end-line="11" selection-end-column="101" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PLAN">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/collection/collections">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/collection/references">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1496">
-              <caret line="88" column="24" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/collection/CollectionsHierarchy.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SQL">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="64" selection-start-column="64" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/exception/exceptions">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SOLID">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1037">
-              <caret line="61" selection-start-line="61" selection-end-line="61" />
+            <state>
+              <caret column="20" selection-start-column="20" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -167,24 +142,56 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OOP">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="118" selection-start-line="4" selection-start-column="118" selection-end-line="4" selection-end-column="118" />
+            <state>
+              <caret column="61" lean-forward="true" selection-start-column="61" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/IntervievQuestions.java">
+        <entry file="file://$PROJECT_DIR$/src/collection/collections">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="187">
+              <caret line="11" column="43" lean-forward="true" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/collection/references">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="835">
+              <caret line="118" column="111" lean-forward="true" selection-start-line="118" selection-start-column="111" selection-end-line="118" selection-end-column="111" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/collection/Скорость коллекций.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/algoritms/sorting/alg.gif">
           <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/algoritms/sorting/SortedAlgoritms.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="591">
+              <caret line="220" column="17" lean-forward="true" selection-start-line="220" selection-start-column="17" selection-end-line="220" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/multithreads/multithreads">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="98" lean-forward="true" selection-start-line="8" selection-start-column="98" selection-end-line="8" selection-end-column="98" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -209,14 +216,19 @@
         <option value="$PROJECT_DIR$/src/SOLID" />
         <option value="$PROJECT_DIR$/src/OOP" />
         <option value="$PROJECT_DIR$/src/algoritms/SortedAlgoritms.java" />
-        <option value="$PROJECT_DIR$/src/algoritms/sorting/SortedAlgoritms.java" />
         <option value="$PROJECT_DIR$/src/JVM" />
         <option value="$PROJECT_DIR$/src/JVM_class" />
         <option value="$PROJECT_DIR$/src/PLAN" />
         <option value="$PROJECT_DIR$/src/jvm/JVM_memory" />
-        <option value="$PROJECT_DIR$/src/collection/collections" />
         <option value="$PROJECT_DIR$/src/collection/references" />
+        <option value="$PROJECT_DIR$/src/collection/collectionQuestions" />
+        <option value="$PROJECT_DIR$/src/HashAndEquals" />
+        <option value="$PROJECT_DIR$/src/restMicroservices/restMicroservices" />
+        <option value="$PROJECT_DIR$/src/SQL" />
         <option value="$PROJECT_DIR$/src/exception/exceptions" />
+        <option value="$PROJECT_DIR$/src/collection/collections" />
+        <option value="$PROJECT_DIR$/src/algoritms/sorting/SortedAlgoritms.java" />
+        <option value="$PROJECT_DIR$/src/multithreads/multithreads" />
       </list>
     </option>
   </component>
@@ -237,7 +249,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -267,12 +278,6 @@
               <item name="Java_IntevievsPrepare" type="b2602c69:ProjectViewProjectNode" />
               <item name="Java_IntevievsPrepare" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="books" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Java_IntevievsPrepare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Java_IntevievsPrepare" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="collection" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -287,18 +292,31 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="jvm" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Java_IntevievsPrepare" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java_IntevievsPrepare" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="multithreads" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Java_IntevievsPrepare" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java_IntevievsPrepare" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="restMicroservices" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1615040514225" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1615722974229" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../testProject" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -347,18 +365,27 @@
       <workItem from="1614878772098" duration="3269000" />
       <workItem from="1615012737341" duration="949000" />
       <workItem from="1615016761616" duration="2113000" />
-      <workItem from="1615029458531" duration="7764000" />
+      <workItem from="1615029458531" duration="9166000" />
+      <workItem from="1615098407484" duration="889000" />
+      <workItem from="1615226127332" duration="56000" />
+      <workItem from="1615226455467" duration="623000" />
+      <workItem from="1615481259913" duration="3048000" />
+      <workItem from="1615557505224" duration="6365000" />
+      <workItem from="1615643974043" duration="649000" />
+      <workItem from="1615705040512" duration="961000" />
+      <workItem from="1615719377049" duration="1431000" />
+      <workItem from="1615916779175" duration="3009000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14095000" />
+    <option name="totallyTimeSpent" value="32528000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="83" y="-8" width="1845" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.259944" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28851542" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -397,10 +424,52 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/SOLID.java" />
-    <entry file="file://$PROJECT_DIR$/src/algoritms/sorting/SortedAlgoritms.java">
+    <entry file="file://$PROJECT_DIR$/src/jvm/JVM_class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1717">
-          <caret line="101" selection-start-line="101" selection-end-line="101" />
+        <state relative-caret-position="408">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/collection/collectionQuestions">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3196">
+          <caret line="188" selection-start-line="188" selection-end-line="188" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IntervievQuestions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HashAndEquals">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="32" selection-start-column="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/restMicroservices/restMicroservices">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="75" selection-start-line="6" selection-start-column="75" selection-end-line="6" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvm/JVM_memory">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PLAN">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -411,64 +480,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OOP">
+    <entry file="file://$PROJECT_DIR$/src/exception/exceptionsInJavaHierarchy-300x130.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/multithreads/multithreads">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="118" selection-start-line="4" selection-start-column="118" selection-end-line="4" selection-end-column="118" />
+        <state relative-caret-position="136">
+          <caret line="8" column="98" lean-forward="true" selection-start-line="8" selection-start-column="98" selection-end-line="8" selection-end-column="98" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IntervievQuestions.java">
+    <entry file="file://$PROJECT_DIR$/src/algoritms/sorting/SortedAlgoritms.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="591">
+          <caret line="220" column="17" lean-forward="true" selection-start-line="220" selection-start-column="17" selection-end-line="220" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/algoritms/sorting/alg.gif">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvm/JVM_class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/collection/Скорость коллекций.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvm/JVM_memory">
+    <entry file="file://$PROJECT_DIR$/src/collection/references">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="101" selection-start-line="11" selection-start-column="101" selection-end-line="11" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PLAN">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="835">
+          <caret line="118" column="111" lean-forward="true" selection-start-line="118" selection-start-column="111" selection-end-line="118" selection-end-column="111" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/collection/collections">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="187">
+          <caret line="11" column="43" lean-forward="true" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/collection/references">
+    <entry file="file://$PROJECT_DIR$/src/OOP">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="88" column="24" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
+        <state>
+          <caret column="61" lean-forward="true" selection-start-column="61" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/exception/exceptions">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SQL">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="64" selection-start-column="64" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/collection/CollectionsHierarchy.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
   <component name="masterDetails">
